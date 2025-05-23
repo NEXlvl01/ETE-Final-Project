@@ -34,6 +34,7 @@ const createFeedback = async (req, res) => {
       error: 'Failed to save feedback',
       details: error.message 
     });
+    console.log(error);
   }
 };
 
@@ -46,6 +47,7 @@ const getAllFeedback = async (req, res) => {
       error: 'Failed to fetch feedback',
       details: error.message 
     });
+    console.log(error);
   }
 };
 
