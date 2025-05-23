@@ -1,5 +1,6 @@
 const Feedback = require('../models/Feedback');
 
+// Function to create feedback
 const createFeedback = async (req, res) => {
   try {
     const { userName, rating, feedbackText } = req.body;
@@ -38,6 +39,7 @@ const createFeedback = async (req, res) => {
   }
 };
 
+// Function to get all feedback
 const getAllFeedback = async (req, res) => {
   try {
     const feedbacks = await Feedback.find().sort({ createdAt: -1 });
